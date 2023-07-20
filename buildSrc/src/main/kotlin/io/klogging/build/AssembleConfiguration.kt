@@ -47,19 +47,19 @@ fun Project.configureAssemble() {
                                 "pom-default.xml.asc" -> "$filenameRoot.pom.asc"
                                 else -> fileName
                             }
-                        }
+                        },
                 )
 
                 with(
                     copySpec()
                         .from(tasks.named("generatePomFileFor${publicationName.capitalized()}Publication"))
-                        .rename { fileName -> if (fileName == "pom-default.xml") "$filenameRoot.pom" else fileName }
+                        .rename { fileName -> if (fileName == "pom-default.xml") "$filenameRoot.pom" else fileName },
                 )
 
                 with(
                     copySpec()
                         .from(tasks.named("generateMetadataFileFor${publicationName.capitalize()}Publication"))
-                        .rename { fileName -> if (fileName == "module.json") "$filenameRoot.module.json" else fileName }
+                        .rename { fileName -> if (fileName == "module.json") "$filenameRoot.module.json" else fileName },
                 )
             }
 

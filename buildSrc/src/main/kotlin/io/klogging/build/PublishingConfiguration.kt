@@ -71,7 +71,7 @@ fun Project.configurePublishing() {
 private fun Project.createPublishingTasks(
     repoUsername: String?,
     repoPassword: String?,
-    validateCredentialsTask: TaskProvider<Task>
+    validateCredentialsTask: TaskProvider<Task>,
 ) {
     configure<PublishingExtension> {
         publications.withType<MavenPublication> {
@@ -160,7 +160,7 @@ private fun Project.createSigningTasks() {
 }
 
 private fun Project.createReleaseTasks(
-    validateCredentialsTask: TaskProvider<Task>
+    validateCredentialsTask: TaskProvider<Task>,
 ) {
     setOf("closeSonatypeStagingRepository", "releaseSonatypeStagingRepository").forEach { taskName ->
         tasks.named(taskName).configure {

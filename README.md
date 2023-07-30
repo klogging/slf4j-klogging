@@ -1,8 +1,6 @@
 # slf4j-klogging
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build](https://github.com/klogging/slf4j-klogging/actions/workflows/build.yml/badge.svg)](https://github.com/klogging/klogging/actions/workflows/build.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/io.klogging/slf4j-klogging.svg?label=maven%20central)](https://search.maven.org/search?q=g:%22io.klogging%22%20AND%20a:%22slf4j-klogging%22)
+## The code for this library is now [here](https://github.com/klogging/klogging/tree/main/slf4j-klogging) and this repository is archived 
 
 A simple [SLF4J](https://www.slf4j.org) binding to use with Klogging.
 
@@ -14,7 +12,7 @@ and [using Klogging with Spring Boot via SLF4J](https://klogging.io/docs/java/sp
 Specify this library as the dependency. Gradle:
 
 ```kotlin
-    implementation("io.klogging:slf4j-klogging:0.3.6")
+    implementation("io.klogging:slf4j-klogging:0.5.0")
 ```
 
 Maven:
@@ -24,7 +22,7 @@ Maven:
     <dependency>
         <groupId>io.klogging</groupId>
         <artifactId>slf4j-klogging</artifactId>
-        <version>0.3.6</version>
+        <version>0.5.0</version>
     </dependency>
 </dependencies>
 ```
